@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="http://localhost:3006/ux/ux.css">
+<script src="https://jte.mehfi.us/src/jte.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="http://localhost:3006/navdialog/src/navdialog.js"></script>    
+<script src="http://localhost:3006/supauth/supauth.js"></script>
+<style>
+    
+</style>
+<script>
+
+    globalThis.auth = {}
+    globalThis.auth.SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtnd25ucWJwb2hobGRmcm9vZ21tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI4NTc2MjgsImV4cCI6MjAyODQzMzYyOH0.Mrxll-WATVuV0NXB36Tf2LJBf5KDZRsXSqFhLmTVbME";
+    globalThis.auth.SUPABASE_URL = "https://kgwnnqbpohhldfroogmm.supabase.co/";
+    globalThis.auth.URL_HOST_PRODUCTION = "mehfi.us";
+    globalThis.auth.URL_REDIRECT_PRODUCTION = "https://mehfi.us";
+    globalThis.auth.URL_REDIRECT_DEV = "http://localhost:3006";       
+    supauth(function(session_data) {
+        console.log('Session successful!', session_data);
+        // Add your success logic here
+    });
+
+</script>
+</body>
+</html>
