@@ -37,13 +37,9 @@ const supauth = (async function(success_callback) {
             const user_name = session.user.user_metadata.full_name || "Usuário sem nome";
             const user_email = session.user.email || "Email não disponível";
             const provider = session.user.app_metadata.provider || "plataforma desconhecida";        
-            const decoded_token = decodeJWT(session.access_token);
+            const decoded_token = decodeJWT(session.access_token);           
 
-            console.log(`Bem-vindo de volta ${user_name} (${user_email}) via ${provider}`);
-            console.log('Access Token:', session.access_token);
-            console.log('Access Token Decodificado:', decoded_token);                
-
-            if (typeof success_callback === 'function') {
+            if (typeof success_callback === 'function') {   
                 success_callback({
                     user_name,
                     user_email,
