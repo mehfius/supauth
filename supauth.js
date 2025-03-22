@@ -38,6 +38,7 @@ const supauth = (async function(success_callback) {
             const user_email = session.user.email || "Email não disponível";
             const provider = session.user.app_metadata.provider || "plataforma desconhecida";        
             const decoded_token = decodeJWT(session.access_token);           
+            const profile_image_url = session.user.user_metadata.avatar_url || "no_image_available";
 
             if (typeof success_callback === 'function') {   
                 success_callback({
@@ -45,7 +46,8 @@ const supauth = (async function(success_callback) {
                     user_email,
                     provider,
                     access_token: session.access_token,
-                    decoded_token
+                    decoded_token,
+                    profile_image_url
                 });
             }
 
